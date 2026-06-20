@@ -10,5 +10,4 @@ if name == "admin":
     if password == 1234:
         print("login successful")
 else:
-
- print("login failed")
+    print("login failed")
