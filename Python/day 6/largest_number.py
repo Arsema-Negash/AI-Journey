@@ -1,7 +1,9 @@
-num = [7,3,9,1,6]
+#num = [7,3,9,1,6]
+x=input("enter numbers using space:-")
+num=list(map(int, x.split()))
 
-max = num[0]
+large = num[0]
 for n in num:
-    if n>max:
-        max=n
-print(max)
+    if n>large:
+        large=n
+print(large)
