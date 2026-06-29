@@ -21,7 +21,14 @@ def view(student):
     print ("Department:",student["department"])
     print ("Age:",student["Age"])
     print ("CGPA:",student["CGPA"])
-    
+
+def search(student):
+    id=input("enter id you want to find")
+    if student["ID"]==id:
+        view(student)
+    else:
+        print("student not found")
+        
 
 student={}
 print("student management")
