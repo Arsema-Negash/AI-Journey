@@ -42,34 +42,42 @@ def exit():
     quit()
         
 student={}
-print("student management")
-print("1. add student ")
-print("2. view student ")
-print("3. search student ")
-print("4. delete student ")
-print("5. exit ")
+
+while True:
+    print("student management")
+    print("1. add student ")
+    print("2. view student ")
+    print("3. search student ")
+    print("4. delete student ")
+    print("5. exit ")
     
     
-choice = int(input ("enter your choice"))
+    choice = int(input ("enter your choice"))
         
 
-match choice:
-    case 1:
-        add()
-    case 2:
-        if student:
-            view(student)
-        else:
-            print("no student record add a student first")
-    case 3:
-        if student:
-            search(student)
-        else:
-            print("no student record add a student first")
-    case 4:
-        if student:
-            delete(student)
-        else:
-            print("no student record add a student first")  
-    case 5:
-        exit() 
+    match choice:
+        case 1:
+            add()
+        case 2:
+            if student:
+                view(student)
+            else:
+                print("no student record add a student first")
+        case 3:
+            if student:
+                search(student)
+            else:
+                print("no student record add a student first")
+        case 4:
+            if student:
+                delete(student)
+            else:
+             print("no student record add a student first")  
+        case 5:
+         exit() 
+        case _:
+            print("invalid choice")
+         
+    again = input("do you want do it again y/n").lower()
+    if again != 'y':
+        break
