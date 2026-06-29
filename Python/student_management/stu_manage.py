@@ -29,7 +29,14 @@ def search(student):
     else:
         print("student not found")
         
-
+def delete(student):
+    id=input("enter id you want to delete")
+    if student["ID"]==id:
+        student.clear()
+        print("student deleted")
+    else:
+        print("student not found")
+        
 student={}
 print("student management")
 print("1. add student ")
