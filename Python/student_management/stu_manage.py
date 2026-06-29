@@ -48,3 +48,22 @@ print("5. exit ")
     
 choice = int(input ("enter your choice"))
         
+
+match choice:
+    case 1:
+        add()
+    case 2:
+        if student:
+            view(student)
+        else:
+            print("no student record add a student first")
+    case 3:
+        if student:
+            search(student)
+        else:
+            print("no student record add a student first")
+    case 4:
+        if student:
+            delete(student)
+        else:
+            print("no student record add a student first")   
