@@ -15,6 +15,13 @@ def add():
     
     return student
 
+def view(student):
+    print ("Name:",student["name"])
+    print ("ID:",student["ID"])
+    print ("Department:",student["department"])
+    print ("Age:",student["Age"])
+    print ("CGPA:",student["CGPA"])
+    
 
 student={}
 print("student management")
