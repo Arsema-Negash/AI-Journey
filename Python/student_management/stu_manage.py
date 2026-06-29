@@ -37,6 +37,10 @@ def delete(student):
     else:
         print("student not found")
         
+def exit():
+    print("exiting the student management")
+    quit()
+        
 student={}
 print("student management")
 print("1. add student ")
@@ -66,4 +70,6 @@ match choice:
         if student:
             delete(student)
         else:
-            print("no student record add a student first")   
+            print("no student record add a student first")  
+    case 5:
+        exit() 
