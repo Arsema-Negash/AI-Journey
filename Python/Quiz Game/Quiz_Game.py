@@ -28,3 +28,19 @@ def add(quizes):
     quizes["questions"].append(new)
     print("question added successfully")
     return quizes
+
+def play(quizes):
+    for q in quizes["question"]:
+        print(q["question"])
+        for opt in q["options"]:
+            print(opt)
+        user_ans = input("Enter your answer: ")
+        if user_ans.lower() == q["answer"].strip().lower():
+            print("correct answer")
+            score += 1
+        elif user_ans.lower() != q["answer"].strip().lower():
+            print("incorrect answer the answer was", q["answer"])
+        else:
+            print("you entered an invalid value")
+            
+        return quizes
