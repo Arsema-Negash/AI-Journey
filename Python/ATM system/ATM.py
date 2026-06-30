@@ -40,7 +40,7 @@ def transfer(balance):
             ozr_balance += amount
             accounts[ozr_acc] = ozr_balance
             
-            print(amount, "has been transfered to", ozr_acc,"their current balance is",ozr_balance)
+            print(amount, "has been transfered to", ozr_acc,"their current balance is")
             print("your remaining balance is", balance)
         else:
             print("invalid amount")
