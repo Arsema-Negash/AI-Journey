@@ -1,0 +1,6 @@
+print("1. deposit")
+print("2. withdraw")
+print("3. check balance")
+print("4. transfer")
+print("5. exit")
+choice = int(input("enter your choice "))
