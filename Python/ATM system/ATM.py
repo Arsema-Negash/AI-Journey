@@ -49,11 +49,28 @@ def transfer(balance):
         
     return balance
 
+while True: 
+    print("1. deposit") 
+    print("2. withdraw")
+    print("3. check balance")
+    print("4. transfer")
+    print("5. exit")
+    choice = int(input("enter your choice "))
 
-print("1. deposit") 
-print("2. withdraw")
-print("3. check balance")
-print("4. transfer")
-print("5. exit")
-choice = int(input("enter your choice "))
 
+    match choice:
+        case 1:
+            current_balance = deposit()
+        case 2:
+            current_balance = withdraw(current_balance)
+        case 3:
+            current_balance = check_balance(current_balance)
+        case 4:
+            current_balance = transfer(current_balance)
+        case 5:
+            print("exiting the atm system")
+            quit()
+    repeat = input("do you want to do it again y/n ").lower()
+    if repeat != 'y':
+        print("exiting the atm system")
+        break
