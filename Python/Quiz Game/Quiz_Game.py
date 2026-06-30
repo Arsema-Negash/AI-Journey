@@ -43,4 +43,15 @@ def play(quizes):
         else:
             print("you entered an invalid value")
             
-        return quizes
+        return score
+    
+print("what do you want to do")
+print("1. add question to the quiz")
+print("2. play")
+choice = int(input("enter your choice"))
+
+match choice:
+    case 1:
+        new_quizes = add(quizes)
+    case 2:
+        new_score = play(new_quizes)
