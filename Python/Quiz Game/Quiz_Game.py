@@ -30,6 +30,7 @@ def add(quizes):
     return quizes
 
 def play(quizes):
+    count = 0
     for q in quizes["question"]:
         print(q["question"])
         for opt in q["options"]:
@@ -42,16 +43,33 @@ def play(quizes):
             print("incorrect answer the answer was", q["answer"])
         else:
             print("you entered an invalid value")
-            
-        return score
+        count += 1
     
-print("what do you want to do")
-print("1. add question to the quiz")
-print("2. play")
-choice = int(input("enter your choice"))
+    print("your score is", score, "//", count) 
+         
+    ave = (score/count)*100
+    if ave >= 70:
+        print("excellent")
+    elif ave >= 50:
+        print("good")
+    else:
+        print("poor")
+    return quizes
+    
 
-match choice:
-    case 1:
-        new_quizes = add(quizes)
-    case 2:
-        new_score = play(new_quizes)
+while True:   
+    print("what do you want to do")
+    print("1. add question to the quiz")
+    print("2. play")
+    choice = int(input("enter your choice"))
+
+    match choice:
+        case 1:
+            new_quizes = add(quizes)
+        case 2:
+            new_quizes = play(new_quizes)
+        case _:
+            print("invalid input")
+    do = input("do you want to do again? y/n ").lower()
+    if do != 'y':
+        break
